@@ -1,0 +1,8 @@
+<mat-form-field>
+  <mat-label>Weather forecast district</mat-label>
+  <mat-select (selectionChange)="select($event.value)">
+    @for (city of cities; track city) {
+    <mat-option [value]="city.value">{{city.viewValue}}</mat-option>
+    }
+  </mat-select>
+</mat-form-field>
